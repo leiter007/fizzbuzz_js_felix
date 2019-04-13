@@ -81,6 +81,9 @@ after(async ()=> {
 ````
 ...and this block says that after a whole test scenario is run, the browser should close.
 
+## Q7:
+Expectations in the context of testing: It is the expectation that a certain input condition, should generate an expected output. This expecatation is what we are testing. The defined expectation is set by the "expect" function in NPM and in rSPEC.
+
 ## Author
 ________
 **Felix Bonnier** - [leiter007](https://github.com/leiter007)
