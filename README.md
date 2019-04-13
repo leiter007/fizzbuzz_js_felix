@@ -49,6 +49,10 @@ The `===`operator also checks the datatype, i.e meaning that the two conditions 
 
 Source: https://stackoverflow.com/questions/523643/difference-between-and-in-javascript
 
+## Q4:
+Since the `5 === 0` is a stricter condition than than `3 === 0` , there could be situations when both conditions meet (a conflict). If so, you want the right "hierarchy of conditions" to kick in, meaning in this case if something is divisble by both 5 and 3, it should first "listen" to divisible by 5 and return "Buzz", not "Fizz".
+
+
 ## Author
 ________
 **Felix Bonnier** - [leiter007](https://github.com/leiter007)
