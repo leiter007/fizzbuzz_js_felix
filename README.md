@@ -52,6 +52,34 @@ Source: https://stackoverflow.com/questions/523643/difference-between-and-in-jav
 ## Q4:
 Since the `5 === 0` is a stricter condition than than `3 === 0` , there could be situations when both conditions meet (a conflict). If so, you want the right "hierarchy of conditions" to kick in, meaning in this case if something is divisble by both 5 and 3, it should first "listen" to divisible by 5 and return "Buzz", not "Fizz".
 
+## Q5:
+Unit test: Checking a single part of the code to make sure it is functioning on its own. It's tests that can be run by frameworks such as rSPEC.
+
+Feature test: Testing a full feature from the user's perspective - ensuring the user experience is as it should be. When more than just one fraction of the code is tested - with feature tests you (to a greater extent) test the connection between different blocks of code.
+
+## Q6:
+Description of the different code blocks below:
+````
+before(async () => {
+        await  browser.init()
+        await  browser.visitPage('http://localhost:8080/')
+    });
+````
+1.The async/await function - a method used in asynchronous programming. For the test above, it means that before each test we open a (chromium) browser and test the functionality in the webpage listed above.
+
+````
+beforeEach(async () => {
+        await  browser.page.reload();
+    }
+````
+...and this block says that before each test is run, we should reload the browsers webpage
+
+````
+after(async ()=> {
+        await  browser.close();
+    })
+````
+...and this block says that after a whole test scenario is run, the browser should close.
 
 ## Author
 ________
