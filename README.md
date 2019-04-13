@@ -44,8 +44,13 @@ Sources:
 ## Q2:
 Why is the fizzBuzz variable defined outside of the it block? This since the definition will be used in more it blocks (tests) within the describe block going forward. This means we do not need to define it aagin inside coming it blocks - unless we want to change it for that specicif test.
 
+## Q3:
+The `===`operator also checks the datatype, i.e meaning that the two conditions need to be exactly the same. With `==` the datatype could be a comparison between integer and string and still work for example (also called coercion)
+
+Source: https://stackoverflow.com/questions/523643/difference-between-and-in-javascript
+
 ## Author
 ________
-* **Felix Bonnier** - [leiter007](https://github.com/leiter007)
+**Felix Bonnier** - [leiter007](https://github.com/leiter007)
 
  
