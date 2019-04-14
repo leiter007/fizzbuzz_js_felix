@@ -4,24 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"  rel="stylesheet">
     <title>Puppeteer Mocha Scaffold</title>
 </head>
-<body>
+<body class="text-grey-darker text-sm pl-2 font-sans font-hairline">
 
-    <input type="text" id="value">
-    <input type="submit" value="Check" id="button">
-    <div id="display_answer"></div>
+<div class="bg-teal-darker w-full align-middle text-grey-lightest bold pl-2 -ml-2 pt-4 pb-4 border-b border-grey-lighter text-3xl" >
+    The Fizz Buzz Challenge
+</div>
+
+<div class=" text-lg bg-grey-lighter w-full align-middle pl-2 -ml-2 pt-3 pb-3 border-b border-grey-light">
+    What to do?
+</div>
+
+<div class="pb-3 border-b border-grey-lighter font-hairline">
+  
+    <h3 class="pt-3 pb-1">Enter any number in the input field</h3>
+    <p class="pb-1">If divisible by 3, you should get a "Fizz" in the box below</p>
+    <p class="pb-1">If divisible by 5, you should get a "Buzz" in the box below</p>
+    <p class="pb-3">If divisible by 3 and 5, you should get a... </p>
+    <h3 class="text-lg">FizzBuzz!</h3>
+</div>
+
+<div class ="pt-5 w-1/3">
+    <div class="pb-2 border-b border-grey-lighter">
+        <input class="self-center appearance-none block w-full h-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" type="text" id="value">
+    </div>
+    <div class="pb-4 pt-2s w-1/4">
+        <input class="self-center w-full bg-grey-lightest hover:bg-grey-light text-grey-darkest font-semibold py-2 px-2 border border-grey-light rounded shadow pt-2" type="submit" value="Check" id="button">
+    </div>
+    <div class="p-5 h-full border-b border-teal-darker border-t border-teal-darker">
+        <span class="h-full font-medum w-full" id="display_answer"></span>
+    </div>
+</div>
 
     <script src="./js/fizz-buzz.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            let button = document.getElementById('button')
-            let displayDiv = document.getElementById('display_answer')
-            button.addEventListener('click', () =>{
-                let value = document.getElementById('value').value
-                let fizzBuzz = new FizzBuzz
-                let result = fizzBuzz.check(value)
-                displayDiv.innerHTML = result;
+        document.addEventListener('DOMContentLoaded', () => { //executes all code below, when the DOM (webpage) is loaded - and defines it using asn arrow function =>
+            let button = document.getElementById('button') //defines a local variable inside the function (button) that calls on the "Check" button  
+            let displayDiv = document.getElementById('display_answer') //defines a local variable of the HTML div that will dfisplay the answer after clicking on the button
+            button.addEventListener('click', () =>{ //adding what code should be executed after the "Check" button is clicked on
+                let value = document.getElementById('value').value //defining as local variable of the input field where the numbers in the FizzBuzz is inputted
+                let fizzBuzz = new FizzBuzz //defining a local variable of the FizzBuzz function defined in the fizz-buzz.js file
+                let result = fizzBuzz.check(value) //defining a local variable of the resulting value, when the check function is called on - which defines the "fizzbuzz" calculation conditions 
+                displayDiv.innerHTML = result; //inserts the resulting value of what comes out when you call on the fizzbuzz.check function - into the pre-defined HTML div. So it can be displayed nicely on the webpage.
             })
         })
     </script>

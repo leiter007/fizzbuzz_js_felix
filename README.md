@@ -84,6 +84,29 @@ after(async ()=> {
 ## Q7:
 Expectations in the context of testing: It is the expectation that a certain input condition, should generate an expected output. This expecatation is what we are testing. The defined expectation is set by the "expect" function in NPM and in rSPEC.
 
+## Q8:
+Explains what the inserted JS code in the HTML file says - line by line (the ones after //)
+````
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { //executes all code below, when the DOM (webpage) is loaded - and defines it using asn arrow function =>
+            let button = document.getElementById('button') //defines a local variable inside the function (button) that calls on the "Check" button  
+            let displayDiv = document.getElementById('display_answer') //defines a local variable of the HTML div that will dfisplay the answer after clicking on the button
+            button.addEventListener('click', () =>{ //adding what code should be executed after the "Check" button is clicked on
+                let value = document.getElementById('value').value //defining as local variable of the input field where the numbers in the FizzBuzz is inputted
+                let fizzBuzz = new FizzBuzz //defining a local variable of the FizzBuzz function defined in the fizz-buzz.js file
+                let result = fizzBuzz.check(value) //defining a local variable of the resulting value, when the check function is called on - which defines the "fizzbuzz" calculation conditions 
+                displayDiv.innerHTML = result; //inserts the resulting value of what comes out when you call on the fizzbuzz.check function - into the pre-defined HTML div. So it can be displayed nicely on the webpage.
+            })
+        })
+    </script>
+````
+## Q9:
+CDN(Content Delivery Network) = A network of proxy servers and data centers, which aims to make it easy to access a client's content by multiple end users - with high performance - by distributing the service spatially relative to the end-users. I.e "a network for delivering content". By using a CDN, the pressure on the webserver is lower, and at the same time the content/data can be delivered faster to the end-user - regardless of where in the world his/her computor is located!
+
+CDNs serve a large portion of the internet content today such as web objects (text, graphics), downloadable objects (files, documents etc), video streaming, and applications.
+
+Source: https://en.wikipedia.org/wiki/Content_delivery_network
+
 ## Author
 ________
 **Felix Bonnier** - [leiter007](https://github.com/leiter007)
