@@ -34,7 +34,7 @@
         <input class="self-center w-full bg-grey-lightest hover:bg-grey-light text-grey-darkest font-semibold py-2 px-2 border border-grey-light rounded shadow pt-2" type="submit" value="Check" id="button">
     </div>
     <div class="p-5 h-full border-b border-teal-darker border-t border-teal-darker">
-        <span class="h-full font-medum w-full" id="display_answer"></span>
+        <span class="h-full w-full" id="display_answer"></span>
     </div>
 </div>
 
@@ -43,13 +43,22 @@
         document.addEventListener('DOMContentLoaded', () => { //executes all code below, when the DOM (webpage) is loaded - and defines it using asn arrow function =>
             let button = document.getElementById('button') //defines a local variable inside the function (button) that calls on the "Check" button  
             let displayDiv = document.getElementById('display_answer') //defines a local variable of the HTML div that will dfisplay the answer after clicking on the button
+            
             button.addEventListener('click', () =>{ //adding what code should be executed after the "Check" button is clicked on
                 let value = document.getElementById('value').value //defining as local variable of the input field where the numbers in the FizzBuzz is inputted
                 let fizzBuzz = new FizzBuzz //defining a local variable of the FizzBuzz function defined in the fizz-buzz.js file
                 let result = fizzBuzz.check(value) //defining a local variable of the resulting value, when the check function is called on - which defines the "fizzbuzz" calculation conditions 
-                displayDiv.innerHTML = result; //inserts the resulting value of what comes out when you call on the fizzbuzz.check function - into the pre-defined HTML div. So it can be displayed nicely on the webpage.
-            })
+
+                    if (result == "FizzBuzz") {
+                        displayDiv.classList = "text-red-dark font-semibold"
+                        displayDiv.innerHTML = "FizzBuzz!!!"
+                    } else {
+                        displayDiv.innerHTML = result; //inserts the resulting value of what comes out when you call on the fizzbuzz.check function - into the pre-defined HTML div. So it can be displayed nicely on the webpage.
+                        displayDiv.classList = "text-grey-dark text-base font-hairline" 
+                    }
+                })
         })
+
     </script>
 
 
