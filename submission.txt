@@ -1,0 +1,5 @@
+SUBMISSION WEEKEND 2: FizzBuzz CHALLENGE
+
+Repo: https://github.com/leiter007/fizzbuzz_js_felix
+Pull request: 
+Deployed site: https://leiter007.github.io/fizzbuzz_js_felix/
