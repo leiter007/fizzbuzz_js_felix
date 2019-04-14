@@ -19,4 +19,13 @@ describe('FizzBuzz', () => {
         expect(fizzBuzz.check(15)).to.eql('FizzBuzz')
     }) 
 
+    it('returns error message if input is not a number', () => {
+        expect(fizzBuzz.check("hello")).to.eql('Please put in a valid number')
+    })
+
+    it('returns error message if input is 0', () => {
+        expect(fizzBuzz.check(0)).to.eql('Please put in a valid number')
+    }) 
+
+
 })
