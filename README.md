@@ -1,10 +1,10 @@
 # FizzBuzz challenge
 ## Description
-This repo contains the second challenge of the [Craft Academy Bootcamp](https://craftacademy.se/english/curriculum/), by April 2019 Cohort.
+This repo contains the second weekend challenge of the [Craft Academy Bootcamp](https://craftacademy.se/english/curriculum/), by April 2019 Cohort.
 
 ## Objective 
 ________
-In this chasllenge, the "traditional" programming kata of FizzBuzz is expected to be implemented using JavaScript. Expectations of the final delivery by end of weekend:
+In this challenge, the "traditional" programming kata of FizzBuzz is expected to be implemented using JavaScript. Expectations of the final delivery by end of weekend:
 
 * A deployed website with some styling
 * All test are going green
@@ -42,7 +42,7 @@ Sources:
 * https://www.w3schools.com/jsref/jsref_eval.asp
 
 ## Q2:
-Why is the fizzBuzz variable defined outside of the it block? This since the definition will be used in more it blocks (tests) within the describe block going forward. This means we do not need to define it aagin inside coming it blocks - unless we want to change it for that specicif test.
+Why is the fizzBuzz variable defined outside of the it block? This since the definition will be used in more IT blocks (tests) within the describe block going forward. This means we do not need to define it again inside coming IT blocks - unless we want to change it for that specicif test.
 
 ## Q3:
 The `===`operator also checks the datatype, i.e meaning that the two conditions need to be exactly the same. With `==` the datatype could be a comparison between integer and string and still work for example (also called coercion)
@@ -65,7 +65,7 @@ before(async () => {
         await  browser.visitPage('http://localhost:8080/')
     });
 ````
-1.The async/await function - a method used in asynchronous programming. For the test above, it means that before each test we open a (chromium) browser and test the functionality in the webpage listed above.
+The async/await function - a method used in asynchronous programming. For the test above, it means that before each test we open a (chromium) browser and test the functionality in the webpage listed above.
 
 ````
 beforeEach(async () => {
